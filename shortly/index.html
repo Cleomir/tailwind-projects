@@ -16,6 +16,7 @@
       type="image/png"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="src/script.js" defer></script>
     <title>Shortly</title>
   </head>
   <body>
@@ -87,6 +88,7 @@
         >
           <input
             type="text"
+            id="link-input"
             class="flex-1 p-3 border-2 rounded-lg placeholder-yellow-500 focus:outline-none"
             placeholder="Shorten a link here"
           />
@@ -96,6 +98,11 @@
           >
             Shorten It!
           </button>
+
+          <div
+            id="error-message"
+            class="absolute left-7 bottom-3 text-red text-sm italic"
+          ></div>
         </form>
 
         <!-- links -->
