@@ -1,7 +1,10 @@
+const btn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
 const input = document.getElementById("link-input");
 const linkForm = document.getElementById("link-form");
 const errorMessage = document.getElementById("error-message");
 
+// form validation
 const isValidURL = (url) => {
   const pattern = new RegExp(
     "^(https?:\\/\\/)?" + // protocol
@@ -30,4 +33,11 @@ linkForm.addEventListener("submit", (event) => {
     alert("Success");
     input.value = "";
   }
+});
+
+// hamburger toggle
+btn.addEventListener("click", () => {
+  btn.classList.toggle("open");
+  menu.classList.toggle("flex");
+  menu.classList.toggle("hidden");
 });
